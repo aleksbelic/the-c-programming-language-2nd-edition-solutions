@@ -5,7 +5,7 @@
 - authors: `Brian W. Kernighan`, `Dennis M. Ritchie`
 - originally published by: `Prentice Hall PTR` (1988)
 - ISBN: `86-7991-243-3`
-- published and translated in Serbian by: `CET Computer Equipment and Trade` (2003)
+- translated into Serbian and published by: `CET Computer Equipment and Trade` (2003)
 
 ## Compile 
 
