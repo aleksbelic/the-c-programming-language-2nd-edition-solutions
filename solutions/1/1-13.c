@@ -9,30 +9,30 @@ easy to draw the histogram with the bars horizontal; a vertical orientation is m
 int main(void)
 {
     int c;
-    int currentWordLength = 0;
-    int wordLengths[MAX_WORD_LENGTH];
+    int current_word_length = 0;
+    int word_lengths[MAX_WORD_LENGTH];
 
     for (int i = 0; i < MAX_WORD_LENGTH; i++)
     {
-        wordLengths[i] = 0;
+        word_lengths[i] = 0;
     }
 
     while ((c = getchar()) != EOF)
     {
         if (c == ' ' || c == '\t' || c == '\n')
         {
-            if (currentWordLength > 0)
+            if (current_word_length > 0)
             {
-                if (currentWordLength <= MAX_WORD_LENGTH) // prevent overflow
+                if (current_word_length <= MAX_WORD_LENGTH) // prevent overflow
                 {
-                    wordLengths[currentWordLength - 1]++;
+                    word_lengths[current_word_length - 1]++;
                 }
-                currentWordLength = 0;
+                current_word_length = 0;
             }
         }
         else
         {
-            currentWordLength++;
+            current_word_length++;
         }
     }
 
@@ -40,7 +40,7 @@ int main(void)
     for (int i = 0; i < MAX_WORD_LENGTH; i++)
     {
         printf("%2d: ", i + 1);
-        for (int j = 0; j < wordLengths[i]; j++)
+        for (int j = 0; j < word_lengths[i]; j++)
         {
             printf("*");
         }
@@ -50,20 +50,20 @@ int main(void)
     printf("\n");
 
     printf("Word length vertical histogram (max %d):\n", MAX_WORD_LENGTH);
-    int verticalMax = 0;
+    int vertical_max = 0;
     for (int i = 0; i < MAX_WORD_LENGTH; i++)
     {
-        if (wordLengths[i] > verticalMax)
+        if (word_lengths[i] > vertical_max)
         {
-            verticalMax = wordLengths[i];
+            vertical_max = word_lengths[i];
         }
     }
 
-    for (int i = verticalMax; i > 0; i--)
+    for (int i = vertical_max; i > 0; i--)
     {
         for (int j = 0; j < MAX_WORD_LENGTH; j++)
         {
-            if (wordLengths[j] >= i)
+            if (word_lengths[j] >= i)
             {
                 printf("* ");
             }

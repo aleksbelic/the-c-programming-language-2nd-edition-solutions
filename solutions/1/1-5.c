@@ -8,11 +8,11 @@ that is, from 300 degrees to 0.
 int main(void)
 {
     float fahrenheit, celsius;
-    float fahrenheitMin = 0, fahrenheitMax = 300, step = 20;
+    float fahrenheit_min = 0, fahrenheit_max = 300, step = 20;
 
     printf("F\tC\n----\t----\n");
 
-    for (fahrenheit = fahrenheitMax; fahrenheit >= fahrenheitMin; fahrenheit -= step)
+    for (fahrenheit = fahrenheit_max; fahrenheit >= fahrenheit_min; fahrenheit -= step)
     {
         celsius = 5.0 / 9.0 * (fahrenheit - 32);
         printf("%.1f\t%.1f\n", fahrenheit, celsius);

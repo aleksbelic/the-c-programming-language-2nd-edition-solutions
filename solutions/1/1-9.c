@@ -8,21 +8,21 @@ more blanks by a single blank.
 int main(void)
 {
     int c;
-    int lastWasBlank = 0; // 0 means last character was not a blank, 1 means it was a blank
+    int last_was_blank = 0; // 0 means last character was not a blank, 1 means it was a blank
 
     while ((c = getchar()) != EOF)
     {
         if (c == ' ')
         {
-            if (lastWasBlank == 1)
+            if (last_was_blank == 1)
             {
                 continue;
             }
-            lastWasBlank = 1;
+            last_was_blank = 1;
         }
         else
         {
-            lastWasBlank = 0;
+            last_was_blank = 0;
         }
         putchar(c);
     }

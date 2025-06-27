@@ -7,11 +7,11 @@ Exercise 1-3. Modify the temperature conversion program to print a heading above
 int main(void)
 {
     float fahrenheit, celsius;
-    float fahrenheitMin = 0, fahrenheitMax = 300, step = 20;
+    float fahrenheit_min = 0, fahrenheit_max = 300, step = 20;
 
     printf("F\tC\n----\t----\n");
 
-    for (fahrenheit = fahrenheitMin; fahrenheit <= fahrenheitMax; fahrenheit += step)
+    for (fahrenheit = fahrenheit_min; fahrenheit <= fahrenheit_max; fahrenheit += step)
     {
         celsius = 5.0 / 9.0 * (fahrenheit - 32);
         printf("%.1f\t%.1f\n", fahrenheit, celsius);

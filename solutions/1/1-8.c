@@ -6,19 +6,19 @@ Exercise 1-8. Write a program to count blanks, tabs, and newlines.
 
 int main(void)
 {
-    int c, blanksCount = 0, tabsCount = 0, newlinesCount = 0;
+    int c, blanks_count = 0, tabs_count = 0, newlines_count = 0;
 
     while ((c = getchar()) != EOF)
     {
         if (c == ' ')
-            blanksCount++;
+            blanks_count++;
         else if (c == '\t')
-            tabsCount++;
+            tabs_count++;
         else if (c == '\n')
-            newlinesCount++;
+            newlines_count++;
     }
 
-    printf("Blanks:\t\t%d\nTabs:\t\t%d\nNewlines:\t%d\n", blanksCount, tabsCount, newlinesCount);
+    printf("Blanks:\t\t%d\nTabs:\t\t%d\nNewlines:\t%d\n", blanks_count, tabs_count, newlines_count);
 
     return 0;
 }

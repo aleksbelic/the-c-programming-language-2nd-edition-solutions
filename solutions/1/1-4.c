@@ -7,11 +7,11 @@ Exercise 1-4. Write a program to print the corresponding Celsius to Fahrenheit t
 int main(void)
 {
     float celsius, fahrenheit;
-    float celsiusMin = 0, celsiusMax = 300, step = 20;
+    float celsius_min = 0, celsius_max = 300, step = 20;
 
     printf("C\tF\n----\t----\n");
 
-    for (celsius = celsiusMin; celsius <= celsiusMax; celsius += step)
+    for (celsius = celsius_min; celsius <= celsius_max; celsius += step)
     {
         fahrenheit = celsius * 9.0 / 5.0 + 32;
         printf("%.1f\t%.1f\n", celsius, fahrenheit);
