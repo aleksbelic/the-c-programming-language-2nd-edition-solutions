@@ -4,15 +4,16 @@ write a program that reverses its input a line at a time.
 */
 
 #include <stdio.h>
+#include <string.h>
 
-#define MAX_LINE_LENGTH 5
+#define MAX_LINE_LENGTH 100 // including null terminator '\0'
+
+void reverse_text(char line_text[]); // === void reverse_text(char* line_text)
 
 int main(void)
 {
-    int c;
+    int c, line_length = 0;
     char line_text[MAX_LINE_LENGTH];
-    char line_reversed_text[MAX_LINE_LENGTH];
-    int line_length = 0;
 
     while ((c = getchar()) != EOF)
     {
@@ -20,22 +21,30 @@ int main(void)
         {
             line_text[line_length] = '\0';
 
-            for (int i = line_length - 1; i >= 0; i--)
-            {
-                line_reversed_text[line_length - i - 1] = line_text[i];
-            }
-            line_reversed_text[line_length] = '\0';
+            reverse_text(line_text);
+            printf("%s\n", line_text);
 
-            printf("%s\n", line_reversed_text);
+            // reset for next line
             line_length = 0;
         }
-        else if (line_length < MAX_LINE_LENGTH)
+        else if (line_length < MAX_LINE_LENGTH - 1)
         {
             line_text[line_length++] = c;
         }
     }
 
     return 0;
+}
+void reverse_text(char line_text[])
+{
+    int line_text_length = strlen(line_text);
+
+    for (int i = 0; i < line_text_length / 2; i++)
+    {
+        char temp_char = line_text[i];
+        line_text[i] = line_text[line_text_length - i - 1];
+        line_text[line_text_length - i - 1] = temp_char;
+    }
 }
 
 /*
@@ -53,8 +62,8 @@ cba
 abcd     // input
 dcba
 abcde    // input
-edcba
+dcba
 abcdef   // input
-edcba
+dcba
 
 */

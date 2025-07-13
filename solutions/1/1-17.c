@@ -4,8 +4,8 @@ Exercise 1-17. Write a program to print all input lines that are longer than 80 
 
 #include <stdio.h>
 
-#define MAX_LINE_LENGTH_ALLOWED 100
-#define MIN_LINE_LENGTH_TO_PRINT 81
+#define MAX_LINE_LENGTH_ALLOWED 100 // including null terminator '\0'
+#define MIN_LINE_LENGTH_TO_PRINT 81 // minimum line length to print
 
 int main(void)
 {
@@ -26,7 +26,7 @@ int main(void)
             // reset for next line
             current_line_length = 0;
         }
-        else if (current_line_length < MAX_LINE_LENGTH_ALLOWED)
+        else if (current_line_length < MAX_LINE_LENGTH_ALLOWED - 1) // text will be truncated if > (MAX_LINE_LENGTH_ALLOWED - 1)
         {
             current_line_text[current_line_length++] = c;
         }
@@ -47,7 +47,7 @@ abc
 abcd     // input
 abcd
 abcde    // input
-abcde
+abcd
 abcdef   // input
-abcde
+abcd
 */

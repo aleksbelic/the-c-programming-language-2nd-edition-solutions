@@ -5,7 +5,7 @@ the length of arbitrary long input lines, and as much as possible of the text.
 
 #include <stdio.h>
 
-#define MAX_LINE_LENGTH_ALLOWED 100
+#define MAX_LINE_LENGTH_ALLOWED 100 // including null terminator '\0'
 
 int main(void)
 {
@@ -34,7 +34,7 @@ int main(void)
             // reset for next line
             current_line_length = 0;
         }
-        else if (current_line_length < MAX_LINE_LENGTH_ALLOWED)
+        else if (current_line_length < MAX_LINE_LENGTH_ALLOWED - 1) // text will be truncated if > (MAX_LINE_LENGTH_ALLOWED - 1)
         {
             current_line_text[current_line_length++] = c;
         }
@@ -46,15 +46,20 @@ int main(void)
 }
 
 /*
-short text
-10
-longer text
-11
-the longest text
-16
-abc
-3
+e.g.
+#define MAX_LINE_LENGTH_ALLOWED 20
 
+                         // input
 0
-Longest line (16 chars): the longest text
+short text               // input
+10
+longer text              // input
+11
+even longer text         // input
+16
+abc                      // input
+3
+text_longer_than_allowed // input
+19
+Longest line (19 chars): text_longer_than_al
 */
