@@ -34,12 +34,9 @@ int main(void)
             // reset for next line
             current_line_length = 0;
         }
-        else
+        else if (current_line_length < MAX_LINE_LENGTH_ALLOWED)
         {
-            if (current_line_length < MAX_LINE_LENGTH_ALLOWED - 1)
-            {
-                current_line_text[current_line_length++] = c;
-            }
+            current_line_text[current_line_length++] = c;
         }
     }
 
@@ -57,5 +54,7 @@ the longest text
 16
 abc
 3
+
+0
 Longest line (16 chars): the longest text
 */

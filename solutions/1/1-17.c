@@ -37,8 +37,8 @@ int main(void)
 
 /*
 e.g.
-MAX_LINE_LENGTH_ALLOWED = 5
-MIN_LINE_LENGTH_TO_PRINT = 3
+#define MAX_LINE_LENGTH_ALLOWED 5
+#define MIN_LINE_LENGTH_TO_PRINT 3
 
 a        // input
 ab       // input
