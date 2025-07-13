@@ -9,7 +9,7 @@ the length of arbitrary long input lines, and as much as possible of the text.
 
 int main(void)
 {
-    int c, current_line_length = 0, max_line_length = 0, current_line_index = 0;
+    int c, current_line_length = 0, max_line_length = 0;
     char current_line_text[MAX_LINE_LENGTH_ALLOWED];
     char longest_line_text[MAX_LINE_LENGTH_ALLOWED];
 
@@ -17,7 +17,7 @@ int main(void)
     {
         if (c == '\n')
         {
-            current_line_text[current_line_index] = '\0';
+            current_line_text[current_line_length] = '\0';
 
             if (current_line_length > max_line_length)
             {
@@ -33,15 +33,13 @@ int main(void)
 
             // reset for next line
             current_line_length = 0;
-            current_line_index = 0;
         }
         else
         {
-            if (current_line_index < MAX_LINE_LENGTH_ALLOWED - 1)
+            if (current_line_length < MAX_LINE_LENGTH_ALLOWED - 1)
             {
-                current_line_text[current_line_index++] = c;
+                current_line_text[current_line_length++] = c;
             }
-            current_line_length++;
         }
     }
 
