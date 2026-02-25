@@ -1,1 +1,5 @@
-.vscode/
+/.vscode/
+
+/solutions/**
+!/solutions/**/
+!/solutions/**/*.c
