@@ -40,14 +40,14 @@ e.g.
 #define MAX_LINE_LENGTH_ALLOWED 5
 #define MIN_LINE_LENGTH_TO_PRINT 3
 
-a        // input
-ab       // input
-abc      // input
+a        // user input
+ab       // user input
+abc      // user input
 abc
-abcd     // input
+abcd     // user input
 abcd
-abcde    // input
-abcd
-abcdef   // input
-abcd
+abcde    // user input
+abcde
+abcdef   // user input
+abcdef
 */

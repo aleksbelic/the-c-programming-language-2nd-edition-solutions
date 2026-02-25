@@ -10,14 +10,14 @@
 ## Compile 
 
 Compile your code by using `GCC` compiler command:
-```
-$ gcc my-program.c -o my-program
+```bash
+gcc my-program.c -o my-program
 ```
 where `o` flag specifies output file.
 
 ## Run
 
 Run compiled code:
-```
-$ ./my-program
+```bash
+./my-program
 ```

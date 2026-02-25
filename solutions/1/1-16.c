@@ -49,17 +49,17 @@ int main(void)
 e.g.
 #define MAX_LINE_LENGTH_ALLOWED 20
 
-                         // input
+                         // user input (empty line)
 0
-short text               // input
+short text               // user input
 10
-longer text              // input
+longer text              // user input
 11
-even longer text         // input
+even longer text         // user input
 16
-abc                      // input
+abc                      // user input
 3
-text_longer_than_allowed // input
+text_longer_than_allowed // user input
 19
 Longest line (19 chars): text_longer_than_al
 */

@@ -51,19 +51,19 @@ void reverse_text(char line_text[])
 e.g.
 #define MAX_LINE_LENGTH 5
 
-         // input
+         // user input (empty line)
 
-a        // input
+a        // user input
 a
-ab       // input
+ab       // user input
 ba
-abc      // input
+abc      // user input
 cba
-abcd     // input
+abcd     // user input
 dcba
-abcde    // input
+abcde    // user input
 dcba
-abcdef   // input
+abcdef   // user input
 dcba
 
 */
