@@ -9,11 +9,11 @@
 
 ## Compile 
 
-Compile your code by using `GCC` compiler command:
+Compile your code by using [GCC](https://gcc.gnu.org/) compiler command:
 ```bash
 gcc my-program.c -o my-program
 ```
-where `o` flag specifies output file.
+where `-o` flag specifies the output file.
 
 ## Run
 
