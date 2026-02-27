@@ -16,7 +16,7 @@ int main(void)
     return 0;
 }
 
-/*
+/* Output:
 hello, worldy
 hello, worldz
 hello, world

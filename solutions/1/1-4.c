@@ -6,28 +6,27 @@ Exercise 1-4. Write a program to print the corresponding Celsius to Fahrenheit t
 
 int main(void)
 {
-    float celsius, fahrenheit;
-    float celsius_min = 0, celsius_max = 300, step = 20;
+    float celsius, fahrenheit, celsius_min = 0, celsius_max = 300, step = 20;
 
-    printf("C\tF\n----\t----\n");
+    printf("%5s\t%5s\n-----\t-----\n", "C", "F");
 
     for (celsius = celsius_min; celsius <= celsius_max; celsius += step)
     {
         fahrenheit = celsius * 9.0 / 5.0 + 32;
-        printf("%.1f\t%.1f\n", celsius, fahrenheit);
+        printf("%5.1f\t%5.1f\n", celsius, fahrenheit);
     }
 
     return 0;
 }
 
-/*
-C       F
-----    ----
-0.0     32.0
-20.0    68.0
-40.0    104.0
-60.0    140.0
-80.0    176.0
+/* Output:
+    C       F
+-----   -----
+  0.0    32.0
+ 20.0    68.0
+ 40.0   104.0
+ 60.0   140.0
+ 80.0   176.0
 100.0   212.0
 120.0   248.0
 140.0   284.0
