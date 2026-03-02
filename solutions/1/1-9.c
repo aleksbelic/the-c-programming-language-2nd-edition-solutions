@@ -30,7 +30,7 @@ int main(void)
     return 0;
 }
 
-/*
+/* Output example:
 a b
 a b
 a  b

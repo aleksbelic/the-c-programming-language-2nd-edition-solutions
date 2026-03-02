@@ -25,7 +25,7 @@ int main(void)
     return 0;
 }
 
-/*
+/* Output example:
 This is just    some\sample\text
 This is just\tsome\\sample\\text
 */

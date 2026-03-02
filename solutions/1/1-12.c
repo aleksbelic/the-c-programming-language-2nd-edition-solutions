@@ -29,7 +29,7 @@ int main(void)
     return 0;
 }
 
-/*
+/* Output example:
    This         is a test
 This
 is

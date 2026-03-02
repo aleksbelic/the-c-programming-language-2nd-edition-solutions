@@ -45,10 +45,7 @@ int main(void)
     return 0;
 }
 
-/*
-e.g.
-#define MAX_LINE_LENGTH_ALLOWED 20
-
+/* Output example when MAX_LINE_LENGTH_ALLOWED = 20:
                          // user input (empty line)
 0
 short text               // user input

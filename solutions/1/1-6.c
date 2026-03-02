@@ -20,7 +20,7 @@ int main(void)
     return 0;
 }
 
-/* Output:
+/* Output example:
 asd                         // user input followed by pressing ENTER
 c = 97, (c != EOF) = 1
 c = 115, (c != EOF) = 1

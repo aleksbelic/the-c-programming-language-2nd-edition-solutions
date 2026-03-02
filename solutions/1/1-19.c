@@ -47,11 +47,8 @@ void reverse_text(char line_text[])
     }
 }
 
-/*
-e.g.
-#define MAX_LINE_LENGTH 5
-
-         // user input (empty line)
+/* Output example when MAX_LINE_LENGTH = 5
+         // user input (new line)
 
 a        // user input
 a
@@ -64,6 +61,5 @@ dcba
 abcde    // user input
 dcba
 abcdef   // user input
-dcba
-
+fedcba
 */

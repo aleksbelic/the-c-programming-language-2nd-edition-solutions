@@ -89,7 +89,7 @@ int main(void)
     return 0;
 }
 
-/*
+/* Output example:
 this is just some sample text for testing
 Word length horizontal histogram (max 10):
  1:

@@ -19,7 +19,7 @@ int main(void)
     return 0;
 }
 
-/* Output:
+/* Output example:
     F       C
 -----   -----
   0.0   -17.8

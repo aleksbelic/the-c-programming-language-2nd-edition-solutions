@@ -35,11 +35,7 @@ int main(void)
     return 0;
 }
 
-/*
-e.g.
-#define MAX_LINE_LENGTH_ALLOWED 5
-#define MIN_LINE_LENGTH_TO_PRINT 3
-
+/* Output example when MAX_LINE_LENGTH_ALLOWED = 5 and MIN_LINE_LENGTH_TO_PRINT = 3
 a        // user input
 ab       // user input
 abc      // user input

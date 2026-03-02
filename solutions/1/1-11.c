@@ -3,8 +3,8 @@ Exercise 1-11. How would you test the word count program? What kinds of input ar
 likely to uncover bugs if there are any?
 */
 
-/*
-Check with various inputs:
+/* Solution:
+Check with various inputs, e.g.:
   - empty input
   - single word
   - multiple words separated by spaces, tabs, or newlines

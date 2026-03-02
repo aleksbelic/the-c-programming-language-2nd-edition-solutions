@@ -38,7 +38,7 @@ int main(void)
     return 0;
 }
 
-/*
+/* Output example:
 This is just a frequency test.
 Character frequency horizontal histogram:
  : *****

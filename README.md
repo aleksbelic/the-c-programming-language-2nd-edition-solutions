@@ -7,9 +7,11 @@
 - ISBN: `86-7991-243-3`
 - translated into Serbian and published by: `CET Computer Equipment and Trade` (2003)
 
+This repository contains solutions for exercises from the book. Solutions are written in C programming language and are organized by chapter and exercise number.
+
 ## Compile 
 
-Compile your code by using [GCC](https://gcc.gnu.org/) compiler command:
+Compile your code using [GCC](https://gcc.gnu.org/) compiler command:
 ```bash
 gcc my-program.c -o my-program
 ```

@@ -23,12 +23,10 @@ int main(void)
     return 0;
 }
 
-/*
-abc
-
-
-
-Blanks:         2
+/* Output example:
+ asd    fgh         // user input: blank space followed by "asd", followed by tab, followed by "fgh", followed by ENTER
+                    // user input: ENTER, followed by EOF (Ctrl+D on Linux/macOS or Ctrl+Z on Windows)
+Blanks:         1
 Tabs:           1
-Newlines:       4
+Newlines:       2
 */
