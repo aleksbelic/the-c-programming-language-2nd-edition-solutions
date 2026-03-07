@@ -6,8 +6,7 @@ Exercise 1-12. Write a program that prints its input one word per line.
 
 int main(void)
 {
-    int c;
-    int in_word = 0;
+    int c, in_word = 0;
 
     while ((c = getchar()) != EOF)
     {
@@ -30,7 +29,7 @@ int main(void)
 }
 
 /* Output example:
-   This         is a test
+   This         is a test       // user input
 This
 is
 a

@@ -7,36 +7,32 @@ more blanks by a single blank.
 
 int main(void)
 {
-    int c;
-    int last_was_blank = 0; // 0 means last character was not a blank, 1 means it was a blank
+    int c, last_char_is_blank = 0;
 
     while ((c = getchar()) != EOF)
     {
-        if (c == ' ')
+        if (c != ' ')
         {
-            if (last_was_blank == 1)
-            {
-                continue;
-            }
-            last_was_blank = 1;
+            putchar(c);
+            last_char_is_blank = 0;
         }
-        else
+        else if (last_char_is_blank == 0)
         {
-            last_was_blank = 0;
+            putchar(c);
+            last_char_is_blank = 1;
         }
-        putchar(c);
     }
 
     return 0;
 }
 
 /* Output example:
+a b         // user input
 a b
+a  b        // user input
 a b
-a  b
-a b
+ a b        // user input
  a b
- a b
-  a  b
+  a  b      // user input
  a b
 */

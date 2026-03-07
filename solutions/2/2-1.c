@@ -61,7 +61,7 @@ int main()
     return 0;
 }
 
-/* Output de pends on the system, but typically would be:
+/* Output depends on the system, but typically would be:
 Ranges using standard headers:
 CHAR:
  * signed: -128 to 127

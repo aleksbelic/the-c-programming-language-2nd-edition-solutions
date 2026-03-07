@@ -90,7 +90,7 @@ int main(void)
 }
 
 /* Output example:
-this is just some sample text for testing
+this is just some sample text for testing       // user input
 Word length horizontal histogram (max 10):
  1:
  2: *

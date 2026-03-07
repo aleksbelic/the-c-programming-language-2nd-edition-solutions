@@ -7,7 +7,7 @@ out parts of the program, to see what error messages you get.
 
 int main(void)
 {
-    printf("hello, world\n");
+    printf("hello, world\n"); // \n is a newline charater
     return 0;
 }
 

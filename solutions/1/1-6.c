@@ -15,18 +15,18 @@ int main(void)
     }
 
     // EOF can be sent in a terminal by pressing Ctrl+D on an empty line (on Linux/macOS) or Ctrl+Z (on Win)
-    printf("c = EOF, (c != EOF) = 0\n");
+    printf("c = %d, (c != EOF) = 0\n", c);
 
     return 0;
 }
 
 /* Output example:
-asd                         // user input followed by pressing ENTER
+asd                         // user input
 c = 97, (c != EOF) = 1
 c = 115, (c != EOF) = 1
 c = 100, (c != EOF) = 1
 c = 10, (c != EOF) = 1      // 10 is the ASCII code for the newline character (ENTER)
-xyz                         // user input followed by pressing ENTER
+xyz                         // user input
 c = 120, (c != EOF) = 1
 c = 121, (c != EOF) = 1
 c = 122, (c != EOF) = 1

@@ -26,6 +26,6 @@ int main(void)
 }
 
 /* Output example:
-This is just    some\sample\text
+This is just    some\sample\text    // user input
 This is just\tsome\\sample\\text
 */

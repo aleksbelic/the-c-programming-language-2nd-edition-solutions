@@ -39,7 +39,7 @@ int main(void)
 }
 
 /* Output example:
-This is just a frequency test.
+This is just a frequency test.      // user input
 Character frequency horizontal histogram:
  : *****
 .: *
