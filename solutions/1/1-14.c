@@ -4,34 +4,34 @@ in its input.
 */
 
 #include <stdio.h>
-#include <ctype.h> // for isprint() funtion
+#include <ctype.h> // for "isprint" function (checks if a character is printable)
 
 #define MAX_ASCII 128
 
 int main(void)
 {
     int c;
-    int textCharFrequency[MAX_ASCII] = {0};
+    int text_char_frequency[MAX_ASCII] = {0};
 
     while ((c = getchar()) != EOF)
     {
         if (isprint(c)) // only count printable characters
         {
-            textCharFrequency[(int)c]++;
+            text_char_frequency[c]++;
         }
     }
 
     printf("Character frequency horizontal histogram:\n");
     for (int i = 0; i < MAX_ASCII; i++)
     {
-        if (textCharFrequency[i] != 0)
+        if (text_char_frequency[i] != 0)
         {
             printf("%c: ", (char)i);
-            for (int j = 0; j < textCharFrequency[i]; j++)
+            for (int j = 0; j < text_char_frequency[i]; j++)
             {
-                printf("*");
+                putchar('*');
             }
-            printf("\n");
+            putchar('\n');
         }
     }
 

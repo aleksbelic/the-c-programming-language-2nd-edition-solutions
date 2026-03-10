@@ -10,12 +10,7 @@ int main(void)
 {
     int c;
     int current_word_length = 0;
-    int word_lengths[MAX_WORD_LENGTH];
-
-    for (int i = 0; i < MAX_WORD_LENGTH; i++)
-    {
-        word_lengths[i] = 0;
-    }
+    int word_lengths[MAX_WORD_LENGTH] = {0};
 
     while ((c = getchar()) != EOF)
     {
@@ -42,12 +37,12 @@ int main(void)
         printf("%2d: ", i + 1);
         for (int j = 0; j < word_lengths[i]; j++)
         {
-            printf("*");
+            putchar('*');
         }
-        printf("\n");
+        putchar('\n');
     }
 
-    printf("\n");
+    putchar('\n');
 
     printf("Word length vertical histogram (max %d):\n", MAX_WORD_LENGTH);
     int vertical_max = 0;
@@ -72,19 +67,19 @@ int main(void)
                 printf("  ");
             }
         }
-        printf("\n");
+        putchar('\n');
     }
 
     for (int i = 1; i <= MAX_WORD_LENGTH; i++)
     {
         printf("--");
     }
-    printf("\n");
+    putchar('\n');
     for (int i = 1; i <= MAX_WORD_LENGTH; i++)
     {
         printf("%d ", i);
     }
-    printf("\n");
+    putchar('\n');
 
     return 0;
 }

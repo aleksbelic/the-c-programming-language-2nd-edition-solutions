@@ -5,7 +5,7 @@ the length of arbitrary long input lines, and as much as possible of the text.
 
 #include <stdio.h>
 
-#define MAX_LINE_LENGTH_ALLOWED 100 // including null terminator '\0'
+#define MAX_LINE_LENGTH_ALLOWED 20 // including null terminator '\0'
 
 int main(void)
 {
@@ -17,13 +17,15 @@ int main(void)
     {
         if (c == '\n')
         {
-            current_line_text[current_line_length] = '\0';
+            int terminator_index = current_line_length < MAX_LINE_LENGTH_ALLOWED - 1 ? current_line_length : MAX_LINE_LENGTH_ALLOWED - 1;
+
+            current_line_text[terminator_index] = '\0'; // null-terminate the current line text
 
             if (current_line_length > max_line_length)
             {
                 max_line_length = current_line_length;
 
-                for (int i = 0; i <= current_line_length; i++) // <= to include the null terminator
+                for (int i = 0; i <= terminator_index; i++) // <= to include the null terminator
                 {
                     longest_line_text[i] = current_line_text[i];
                 }
@@ -34,9 +36,13 @@ int main(void)
             // reset for next line
             current_line_length = 0;
         }
-        else if (current_line_length < MAX_LINE_LENGTH_ALLOWED - 1) // text will be truncated if > (MAX_LINE_LENGTH_ALLOWED - 1)
+        else
         {
-            current_line_text[current_line_length++] = c;
+            if (current_line_length < MAX_LINE_LENGTH_ALLOWED - 1)
+            {
+                current_line_text[current_line_length] = c; // store only if available space in current_line_text
+            }
+            current_line_length++; // count the character even if it's not stored in current_line_text (truncated)
         }
     }
 
@@ -46,17 +52,20 @@ int main(void)
 }
 
 /* Output example when MAX_LINE_LENGTH_ALLOWED = 20:
-                         // user input (empty line)
+                            // user input (empty line)
 0
-short text               // user input
+short text                  // user input
 10
-longer text              // user input
+longer text                 // user input
 11
-even longer text         // user input
+even longer text            // user input
 16
-abc                      // user input
+abc                         // user input
 3
-text_longer_than_allowed // user input
-19
-Longest line (19 chars): text_longer_than_al
+text_longer_than_allowed    // user input
+24
+again short                 // user input
+11             
+                            // user input (EOF)
+Longest line (24 chars): text_longer_than_al
 */

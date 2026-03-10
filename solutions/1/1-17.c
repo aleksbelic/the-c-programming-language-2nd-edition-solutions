@@ -16,7 +16,9 @@ int main(void)
     {
         if (c == '\n')
         {
-            current_line_text[current_line_length] = '\0';
+            int terminator_index = current_line_length < MAX_LINE_LENGTH_ALLOWED - 1 ? current_line_length : MAX_LINE_LENGTH_ALLOWED - 1;
+
+            current_line_text[terminator_index] = '\0'; // null-terminate the current line text
 
             if (current_line_length >= MIN_LINE_LENGTH_TO_PRINT)
             {
@@ -26,9 +28,13 @@ int main(void)
             // reset for next line
             current_line_length = 0;
         }
-        else if (current_line_length < MAX_LINE_LENGTH_ALLOWED - 1) // text will be truncated if > (MAX_LINE_LENGTH_ALLOWED - 1)
+        else
         {
-            current_line_text[current_line_length++] = c;
+            if (current_line_length < MAX_LINE_LENGTH_ALLOWED - 1)
+            {
+                current_line_text[current_line_length] = c; // store only if available space in current_line_text
+            }
+            current_line_length++; // count the character even if it's not stored in current_line_text (truncated)
         }
     }
 
@@ -43,7 +49,7 @@ abc
 abcd     // user input
 abcd
 abcde    // user input
-abcde
+abcd
 abcdef   // user input
-abcdef
+abcd
 */
