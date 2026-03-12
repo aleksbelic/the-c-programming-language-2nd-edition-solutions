@@ -13,7 +13,7 @@ void reverse_text(char line_text[]); // === void reverse_text(char* line_text)
 int main(void)
 {
     int c, line_length = 0;
-    char line_text[MAX_LINE_LENGTH];
+    char line_text[MAX_LINE_LENGTH] = {0};
 
     while ((c = getchar()) != EOF)
     {

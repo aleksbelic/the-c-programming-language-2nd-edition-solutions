@@ -10,8 +10,8 @@ the length of arbitrary long input lines, and as much as possible of the text.
 int main(void)
 {
     int c, current_line_length = 0, max_line_length = 0;
-    char current_line_text[MAX_LINE_LENGTH_ALLOWED];
-    char longest_line_text[MAX_LINE_LENGTH_ALLOWED];
+    char current_line_text[MAX_LINE_LENGTH_ALLOWED] = {0};
+    char longest_line_text[MAX_LINE_LENGTH_ALLOWED] = {0};
 
     while ((c = getchar()) != EOF)
     {

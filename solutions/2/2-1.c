@@ -8,7 +8,7 @@ floating-point types.
 #include <stdio.h>
 #include <limits.h>
 
-int main()
+int main(void)
 {
     printf("Ranges using standard headers:\n");
     printf("CHAR:\n");
